@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="row is-horizontal-align">
+            <div class="col-6 is-marginless">
+                <input type="text" id="URL-input" class="text-dark" placeholder="Video URL" />
+            </div>
+            <% if(status == "error"){ %>
+                <img id="icon" class="error" src="https://icongr.am/octicons/alert.svg?size=&color=ff0000"/>
+            <% }else if(!status){ %>    
+                <img id="icon" class="hidden" src=""/>
+            <% } %>  
+        <div class="row is-horizontal-align">
+            <div class="col-3">
+                <input id="dmp4" type="button" class="button primary" value="Download MP4" />
+            </div>
+            <div class="col-3">
+                <input id="dmp3" type="button" class="button dark" value="Download MP3" />
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

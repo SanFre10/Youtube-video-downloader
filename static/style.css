@@ -1,0 +1,40 @@
+html,body {
+    background-color: #cecece !important;
+    height: 100%;
+    width: 100%;
+}
+.row{
+    width: 100%;
+}
+#URL-input{
+    border: 1px solid;
+    border-radius: 10px 10px 0px 0px /10px 10px 0px 0px;
+    width:102.5%;
+    font-size: 2em;
+    margin-top: 30%;
+    margin-left: 1%;
+}
+input[type="button"] {
+    width: 105%;  
+    height: 100px;
+    font-size: 2em;
+    margin-left: 2%;
+}
+#dmp4{
+    border-radius: 0px 0px 0px 10px;
+    background-color: #ff0000;
+    
+}
+#dmp3{
+    border-radius: 0px 0px 10px 0px;
+}
+#icon{
+    position: absolute;
+    margin-top:15%;
+    margin-left:56%;
+    width:50px;
+}
+#icon.hidden {
+    display:none;
+}
+
