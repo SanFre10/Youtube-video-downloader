@@ -1,8 +1,10 @@
 const express = require("express");
-const app = express();
-
 const ytdl = require("ytdl-core");
 const path = require("path");
+
+const app = express();
+const port = process.env.PORT || 3000;
+
 
 app.use(express.static(path.join(__dirname, "static")));
 app.engine("html", require("ejs").renderFile);
@@ -42,8 +44,8 @@ app.get("/download", async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Listening at 3000");
+app.listen(port, () => {
+    console.log("Listening at " + port);
 });
 
 module.exports = app;
