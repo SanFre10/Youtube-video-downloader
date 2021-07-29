@@ -1,32 +1,40 @@
 html,body {
-    background-color: #cecece !important;
-    height: 100%;
-    width: 100%;
+    background-color: #cecece;
+    height: 100vh;
+    width: 100vw;
 }
 .row{
     width: 100%;
 }
 #URL-input{
+    padding: 15px;
     border: 1px solid;
-    border-radius: 10px 10px 0px 0px /10px 10px 0px 0px;
-    width:102.5%;
+    border-radius: 10px 0 0 0;
+    width:100%;
+    height:100%;
     font-size: 2em;
-    margin-top: 30%;
-    margin-left: 1%;
+}
+.search-icon{
+    margin:auto;
+}
+#search{
+    background-color: red;
 }
 input[type="button"] {
-    width: 105%;  
+    width: 100%;  
     height: 100px;
     font-size: 2em;
-    margin-left: 2%;
+}
+#player{
+    width:102.5%;
+    margin-left: 1%;
 }
 #dmp4{
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0 0 0 10px;
     background-color: #ff0000;
-    
 }
 #dmp3{
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0 0 10px 0;
 }
 #icon{
     position: absolute;
@@ -34,9 +42,8 @@ input[type="button"] {
     margin-left:56%;
     width:50px;
 }
-#icon.hidden {
-    display:none;
+.hidden{
+    display: none;
 }
-
 
 

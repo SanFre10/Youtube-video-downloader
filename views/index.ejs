@@ -4,29 +4,48 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+        <link rel="stylesheet" href="style.css" />
         <title>Document</title>
     </head>
 
     <body>
-        <div class="row is-horizontal-align">
-            <div class="col-6 is-marginless">
-                <input type="text" id="URL-input" class="text-dark" placeholder="Video URL" />
+        <div class="row is-horizontal-align" style="margin-top:10%">
+            <div class="col-5 is-marginless">
+                <% if(id){ %>
+                    <input type="text" id="URL-input" class="text-dark" placeholder="Video URL" value="https://www.youtube.com/watch?v=<%= id %>"/>
+                <% }else{ %> 
+                    <input type="text" id="URL-input" class="text-dark" placeholder="Video URL"/>
+                <% } %>  
+            </div>
+            <div class="col-1 is-marginless is-horizontal-align" style="background-color: red;border: 1px solid;border-radius: 0 10px 0 0;">
+                <button type="button" id="search"><img class="search-icon" src="https://icongr.am/fontawesome/search.svg?size=60&color=ffffff"/></button>
             </div>
             <% if(status == "error"){ %>
                 <img id="icon" class="error" src="https://icongr.am/octicons/alert.svg?size=&color=ff0000"/>
-            <% }else if(!status){ %>    
+            <% }else if(status == "ok"){ %>    
+                <img id="icon" class="ok" src=""/>
+            <% }else if(!status){ %> 
                 <img id="icon" class="hidden" src=""/>
             <% } %>  
+        </div>       
+        <span id="videoId" class="hidden"><%= id %></span>
+        <% if(id){ %>
         <div class="row is-horizontal-align">
-            <div class="col-3">
+            <div class="col-6 is-marginless">
+                <div id="player"></div>
+            </div>
+        </div>
+        <% } %>  
+        <div class="row is-horizontal-align">
+            <div class="col-3 is-marginless">
                 <input id="dmp4" type="button" class="button primary" value="Download MP4" />
             </div>
-            <div class="col-3">
+            <div class="col-3 is-marginless">
                 <input id="dmp3" type="button" class="button dark" value="Download MP3" />
             </div>
         </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="script.js"></script>
     </body>
 </html>
